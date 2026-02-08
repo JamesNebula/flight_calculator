@@ -1,0 +1,11 @@
+Airport_Code,Airport_Name,City,Country,Latitude,Longitude
+LAX,Los Angeles International,Los Angeles,USA,33.9425,-118.4081
+JFK,John F. Kennedy International,New York,USA,40.6413,-73.7781
+LHR,London Heathrow,London,UK,51.4700,-0.4543
+NRT,Tokyo Narita,Tokyo,Japan,35.7647,140.3864
+SYD,Sydney Kingsford Smith,Sydney,Australia,-33.9399,151.1753
+DXB,Dubai International,Dubai,UAE,25.2532,55.3657
+CDG,Charles de Gaulle,Paris,France,49.0097,2.5479
+FRA,Frankfurt am Main,Frankfurt,Germany,50.0379,8.5622
+SIN,Singapore Changi,Singapore,Singapore,1.3644,103.9915
+ORD,O'Hare International,Chicago,USA,41.9742,-87.9073

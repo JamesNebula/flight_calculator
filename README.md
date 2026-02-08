@@ -2,8 +2,6 @@
 
 A professional-grade tool for calculating great-circle distances, bearings, and flight times between global airports using the Haversine formula.
 
-![Flight Calculator Demo](demo.png)
-
 ## ✨ Key Features
 
 - **Accurate geodesic calculations** using the Haversine formula
@@ -11,25 +9,33 @@ A professional-grade tool for calculating great-circle distances, bearings, and 
 - **Navigation data**: initial bearing and compass direction
 - **Flight time estimation** based on commercial jet speeds
 - **Batch analysis** with statistics (shortest/longest routes, averages)
+- **Interactive Streamlit UI** with responsive design
 - **Clean CLI interface** with interactive route planning
-- **Professional architecture** demonstrating software engineering best practices
 
-## 🏗️ Architecture Highlights
+## Architecture 
 ```bash
 flight_calculator/
-├── config/ # Constants and configuration
-├── models/ # Dataclasses (Airport, FlightRoute)
+├── streamlit_app.py # Interactive web frontend
+├── main.py # CLI entry point
+├── models/ # Data structures (Airport, FlightRoute)
 ├── services/ # Business logic (calculations, validation)
-├── utils/ # Presentation and I/O helpers
-└── data/ # Externalized airport database
+├── utils/ # Display helpers and file I/O
+├── tests/ # Pytest validation 
+├── data/ # Airport database (CSV)
+└── output/ # Generated reports
 ```
 
 ## 🚀 Quick Start
 
 ```bash
-# Clone repository
-git clone https://github.com/yourusername/flight-calculator.git
-cd flight-calculator
+# Install dependencies
+pip install -r requirements.txt
 
-# Run the calculator (no installation needed - standard library only)
+# Run the Streamlit UI 
+streamlit run streamlit_app.py
+
+# Or run the CLI version
 python main.py
+
+# Run tests
+pytest tests/ -v
