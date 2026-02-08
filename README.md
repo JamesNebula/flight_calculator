@@ -1,6 +1,6 @@
 # ✈️ Flight Path Distance Calculator
 
-**[▶️ Try the Live Demo]((https://flightcalculator.streamlit.app/))**
+**[▶️ Try the Live Demo](https://flightcalculator.streamlit.app/)**
 
 A professional-grade tool for calculating great-circle distances, bearings, and flight times between global airports using the Haversine formula.
 
