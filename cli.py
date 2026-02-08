@@ -38,7 +38,7 @@ def interactive_route_planner():
     display_route_info(route)
     
     # Offer to save
-    save_choice = input("\n💾 Save this route analysis to file? (y/n): ").strip().lower()
+    save_choice = input("\n  Save this route analysis to file? (y/n): ").strip().lower()
     if save_choice == 'y':
         timestamp = int(os.time.time()) # type: ignore
         filename = f"output/route_{origin.code}_to_{destination.code}_{timestamp}.txt"
