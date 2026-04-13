@@ -94,11 +94,8 @@ def calculate_great_circle_distance(lat1, lon1, lat2, lon2, unit='miles'):
 def calculate_inital_bearing(lat1, lon1, lat2, lon2):
     """
     Calculates the initial compass bearing from point 1 to point 2.
-    
-    WHY PILOTS NEED BEARING:
     - Tells them what compass direction to fly
     - Essential for navigation planning
-    - Shows you're thinking beyond just distance
     """
     
     lat1_rad = degrees_to_radians(lat1)
@@ -116,7 +113,7 @@ def calculate_inital_bearing(lat1, lon1, lat2, lon2):
     return round(bearing_deg, 1)
 
 def get_compass_direction(bearing):
-    # Converts numeric bearing to compass direction. - Humans think in "Northeast" not "45.7 degrees"
+    # Converts numeric bearing to compass direction
     directions = [
         "N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE",
         "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"
@@ -204,7 +201,7 @@ def calculate_flight_route(origin_code, destination_code, airports):
     }
     
 def display_route_info(route_info):
-    # Displays formatted flight route information.
+    #formatted flight route information.
     if not route_info:
         return
     
@@ -246,7 +243,7 @@ def display_route_info(route_info):
     print("\n" + "="*70)
     
 def batch_route_analysis(route_list, airports):
-    #Analyzes multiple routes and finds interesting patterns
+    #Analyzes multiple routes and finds patterns
     
     routes_analyzed = []
     total_distance = 0
@@ -384,15 +381,10 @@ def interactive_route_planner():
             
 def main():
     """
-    Main program function - demonstrates both batch and interactive modes.
-    
-    NOTICE THE SAME STRUCTURE AS DAY 1:
     - Setup data
     - Process data
     - Display results
     - Save results
-    
-    But now with more complex mathematics and user interaction!
     """
     print("✈️  Flight Path Distance Calculator")
     print("="*50)
@@ -405,7 +397,7 @@ def main():
     if not airports:
         return
     
-    # Demo: Batch analysis of popular routes
+    # Batch analysis of popular routes
     print("\n🌍 ANALYZING POPULAR INTERNATIONAL ROUTES...")
     popular_routes = [
         ("LAX", "JFK"),  # US Transcontinental
