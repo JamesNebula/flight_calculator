@@ -5,7 +5,7 @@ import streamlit as st
 import os
 from pathlib import Path
 
-# Add project root to path BEFORE importing our modules
+# Add project root to path
 project_root = Path(__file__).parent
 if str(project_root) not in os.sys.path:
     os.sys.path.insert(0, str(project_root))
@@ -22,7 +22,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Custom CSS for better styling
+# Custom CSS 
 st.markdown("""
     <style>
     .main-header {
@@ -66,7 +66,7 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-# Load airport database - NO CACHING for debugging
+# Load airport database
 airports = load_airport_database()
 
 # DEBUG: Show what happened during load
@@ -84,7 +84,7 @@ if not airports:
 st.sidebar.header("📍 Select Route")
 st.sidebar.markdown("---")
 
-# Create sorted list of airport options for dropdowns
+#sorted list of airport options for dropdowns
 airport_options = [f"{code} - {airport.city}, {airport.country}" 
                    for code, airport in sorted(airports.items())]
 
@@ -128,7 +128,7 @@ if st.sidebar.button("✈️ Calculate Route", type="primary", use_container_wid
 col1, col2 = st.columns([2, 1])
 
 with col1:
-    # Route Information Section
+    # Route Information 
     st.subheader("🗺️ Route Information")
     
     if 'route' in st.session_state:
@@ -205,14 +205,14 @@ with col2:
             delta=f"({route.estimated_flight_hours:.2f} hours total)"
         )
 
-# Detailed Analysis Section (full width)
+# Detailed Analysis Section 
 if 'route' in st.session_state:
     st.markdown("---")
     st.subheader("📈 Detailed Analysis")
     
     route = st.session_state.route
     
-    # Create three columns for detailed info
+    # three columns for detailed info
     dcol1, dcol2, dcol3 = st.columns(3)
     
     with dcol1:
